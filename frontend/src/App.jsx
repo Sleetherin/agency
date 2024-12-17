@@ -1,34 +1,36 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import Header from './components/Header'; // Make sure the path is correct
-import Footer from './components/Footer'; 
+// Component Imports
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-import Home from './pages/HomePage';
-import CaseFiles from './pages/CaseFilesPage';
-import DetectiveProfiles from './pages/DetectiveProfilesPage';
-import Testimonials from './pages/TestimonialsPage';
-import Blog from './pages/BlogPage';
-import BookingSystem from './pages/BookingSystemPage';
+// Page Imports
+import HomePage from './pages/HomePage';
+import CaseFilesPage from './pages/CaseFilesPage';
+import DetectiveProfilesPage from './pages/DetectiveProfilesPage';
+import TestimonialsPage from './pages/TestimonialsPage';
+import BlogPage from './pages/BlogPage';
+import BookingSystemPage from './pages/BookingSystemPage';
 
-import './App.css'
+// Styles
+import './App.css';
 
 function App() {
-
   return (
     <Router>
       <Header/>
-      <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route path="/case-files" component={CaseFiles}/>
-        <Route path="/detective-profiles" component={DetectiveProfiles}/>
-        <Route path="/testimonials" component={Testimonials}/>
-        <Route path="/blog" component={Blog}/>
-        <Route path="/booking-system" component={BookingSystem}/>
-      </Switch>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/case-files" element={<CaseFilesPage />} />
+        <Route path="/detective-profiles" element={<DetectiveProfilesPage />} />
+        <Route path="/testimonials" element={<TestimonialsPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/booking-system" element={<BookingSystemPage />} />
+      </Routes>
       <Footer/>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
