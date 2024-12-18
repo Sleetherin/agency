@@ -1,0 +1,162 @@
+/* Example fonts (adjust as needed):
+   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond&display=swap" rel="stylesheet">
+*/
+
+header {
+    background: #f2edde; /* parchment-like background */
+    border-bottom: 2px solid #b9b19f;
+    font-family: 'Cormorant Garamond', serif;
+    position: relative;
+    color: #1f1d1a;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  
+  /* Optional: add a subtle image or silhouette in the background*/
+  header {
+    background: #f2edde url('/images/london-skyline.jpg') no-repeat center bottom;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(242,237,222,0.7);
+  }
+  
+  
+  /* Top Section (header-style) */
+  .header-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #b9b19f;
+    text-transform: uppercase;
+  }
+  
+  .header-style h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    letter-spacing: 1px;
+    color: #1f1d1a;
+  }
+  
+  /* Menu style */
+  .header-menu-style {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 1rem 0 0;
+    padding: 0;
+  }
+  
+  .header-menu-style li {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    color: #3a352e;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .header-menu-style button {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid #3a352e;
+    color: #3a352e;
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .header-menu-style button:hover {
+    background: #3a352e;
+    color: #f2edde;
+  }
+  
+  /* Banner Section (banner-style) */
+  .banner-style {
+    padding: 4rem 1rem 0;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Add a decorative element above the title (like a silhouette bird) if desired:*/
+  .banner-style::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: url('/images/bird.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.7;
+  }
+  
+  
+  .banner-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1f1d1a;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    display: inline-block;
+    position: relative;
+  }
+  
+  /* Decorative lines around the banner title */
+  .banner-title::before,
+  .banner-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 2px;
+    background: #3a352e;
+  }
+  
+  .banner-title::before {
+    right: 100%;
+    margin-right: 15px;
+  }
+  
+  .banner-title::after {
+    left: 100%;
+    margin-left: 15px;
+  }
+  
+  .banner-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #3a352e;
+    max-width: 600px;
+    margin: 0.5rem auto;
+  }
+  
+  /* Optional: subtle text shadows for a distressed look */
+  .banner-title,
+  .banner-subtitle {
+    text-shadow: 0 0 1px #3a352e;
+  }
+  
+  /* Optional: Add texture overlay:*/
+  header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/noise.png') repeat;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+  
+  
